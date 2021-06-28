@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="menu.uss" />
+    <ui:VisualElement name="Background" style="flex-grow: 1; flex-direction: row; background-color: rgba(0, 0, 0, 0.87);">
+        <ui:VisualElement name="LeftSide" style="flex-grow: 1; align-items: center; justify-content: center;">
+            <ui:VisualElement name="SettingsContainer" class="container" style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; background-color: rgba(0, 0, 0, 0.77); flex-direction: column; align-items: center;">
+                <ui:Label text="Settings" display-tooltip-when-elided="true" name="ContainerTitle" class="text" />
+                <ui:VisualElement name="SimulationSpeedContainer" class="container" style="flex-direction: row; align-items: center; justify-content: center; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px;">
+                    <ui:Label text="Simulation Speed:" display-tooltip-when-elided="true" name="SimSpeedLabel" class="text" style="flex-shrink: 1;" />
+                    <ui:Slider picking-mode="Ignore" value="10" high-value="1000" show-input-field="false" name="SimSpeed" style="flex-shrink: 1; flex-grow: 1; overflow: visible; display: flex; flex-wrap: nowrap; align-items: stretch; width: 300px; color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="SimulationResolutionContainer" class="container" style="padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; flex-direction: row;">
+                    <ui:Label text="Simulation Resolution:" display-tooltip-when-elided="true" name="SimResLabel" class="text" />
+                    <ui:VisualElement name="FoldoutContainer" style="width: 50px; height: 22px;">
+                        <ui:Foldout text="32" value="false" name="ResolutionFoldout" style="background-color: rgba(0, 0, 0, 0.8); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; position: absolute; height: auto; color: rgb(255, 255, 255);" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Center">
+            <ui:VisualElement name="CenterTop" style="flex-grow: 1; align-items: center;">
+                <ui:VisualElement name="Separator" style="flex-grow: 1; flex-shrink: 1; width: 0; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; margin-left: 16px; margin-right: 16px; margin-top: 16px; margin-bottom: 16px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            </ui:VisualElement>
+            <ui:Button text="Resume&#10;►" display-tooltip-when-elided="true" name="ResumeButton" class="menu_button" style="padding-top: 16px; padding-bottom: 16px; font-size: 18px;" />
+            <ui:VisualElement name="CenterBottom" style="flex-grow: 1; justify-content: center; align-items: center;">
+                <ui:VisualElement name="Separator" style="flex-grow: 1; flex-shrink: 1; width: 0; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; margin-left: 16px; margin-right: 16px; margin-top: 16px; margin-bottom: 16px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                <ui:Button text="Quit" display-tooltip-when-elided="true" name="QuitButton" class="menu_button" style="padding-left: 10px; padding-right: 10px; margin-left: 16px; margin-right: 16px; padding-top: 6px; padding-bottom: 6px;" />
+                <ui:VisualElement name="Separator" style="flex-grow: 1; flex-shrink: 1; width: 0; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; margin-left: 16px; margin-right: 16px; margin-top: 16px; margin-bottom: 16px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightSide" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,15 @@
+#pragma kernel CSMain
+RWTexture2D<float4> Result;
+Texture2D<float4> Input;
+float2 PointA;
+float2 PointB;
+uint IColor;
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    float4 col = Input[id.xy];
+    bool isInRange = all(id.xy >= (uint2)PointA) && all(id.xy <= (uint2)PointB);
+    col = IColor * isInRange + col * !isInRange;
+    Result[id.xy] = col;
+}
