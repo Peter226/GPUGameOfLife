@@ -24,6 +24,8 @@ public class MenuLogic : MonoBehaviour
         _resumeButton = _root.Q<Button>("ResumeButton");
         _quitButton = _root.Q<Button>("QuitButton");
         _speedSlider = _root.Q<Slider>("SimSpeed");
+        _speedSlider.lowValue = 0.0f;
+        _speedSlider.highValue = 4.5f;
         _resolutionFoldout = _root.Q<Foldout>("ResolutionFoldout");
 
         _resumeButton.clicked += Resume;
@@ -64,7 +66,7 @@ public class MenuLogic : MonoBehaviour
                 Pause();
             }
         }
-        gameOfLife.settings.simulationSpeed = _speedSlider.value;
+        gameOfLife.settings.simulationSpeed = Mathf.Pow(10,_speedSlider.value);
     }
     void Resume()
     {

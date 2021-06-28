@@ -81,17 +81,15 @@ public class GameOfLife : MonoBehaviour
         if (settings.running) {
             double simStartTime = _simulationWatcher.Elapsed.TotalMilliseconds;
             double simEndTime = simStartTime;
-            double avgSimTime = 0;
             int simCount = 0;
             while (_simulationTimer > 1)
             {
                 simCount++;
-                if (simEndTime - simStartTime < (0.0166 - avgSimTime))
+                if (simEndTime - simStartTime < 0.04)
                 {
                     Simulate();
                 }
                 simEndTime = _simulationWatcher.Elapsed.TotalMilliseconds;
-                avgSimTime = (simEndTime - simStartTime) / simCount;
                 _simulationTimer -= 1;
             }
             _simulationTimer += Time.deltaTime * settings.simulationSpeed;

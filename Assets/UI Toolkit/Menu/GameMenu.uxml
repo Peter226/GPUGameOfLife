@@ -6,7 +6,7 @@
                 <ui:Label text="Settings" display-tooltip-when-elided="true" name="ContainerTitle" class="text" />
                 <ui:VisualElement name="SimulationSpeedContainer" class="container" style="flex-direction: row; align-items: center; justify-content: center; padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px;">
                     <ui:Label text="Simulation Speed:" display-tooltip-when-elided="true" name="SimSpeedLabel" class="text" style="flex-shrink: 1;" />
-                    <ui:Slider picking-mode="Ignore" value="10" high-value="1000" show-input-field="false" name="SimSpeed" style="flex-shrink: 1; flex-grow: 1; overflow: visible; display: flex; flex-wrap: nowrap; align-items: stretch; width: 300px; color: rgb(255, 255, 255);" />
+                    <ui:Slider picking-mode="Ignore" value="10" high-value="10.6" show-input-field="false" name="SimSpeed" low-value="0.1" style="flex-shrink: 1; flex-grow: 1; overflow: visible; display: flex; flex-wrap: nowrap; align-items: stretch; width: 300px; color: rgb(255, 255, 255);" />
                 </ui:VisualElement>
                 <ui:VisualElement name="SimulationResolutionContainer" class="container" style="padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; flex-direction: row;">
                     <ui:Label text="Simulation Resolution:" display-tooltip-when-elided="true" name="SimResLabel" class="text" />
