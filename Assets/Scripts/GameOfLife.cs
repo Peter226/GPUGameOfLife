@@ -41,6 +41,7 @@ public class GameOfLife : MonoBehaviour
     //Simulation variables
     private float _simulationTimer;
     private int _previousResolution;
+    System.Diagnostics.Stopwatch _simulationWatcher = new System.Diagnostics.Stopwatch();
 
     /// <summary>
     /// Init
@@ -64,6 +65,7 @@ public class GameOfLife : MonoBehaviour
             Debug.LogError("Missing a compute shader! Please fill all references!");
         }
         ClearBuffer(buffer_A);
+        _simulationWatcher.Start();
     }
 
     /// <summary>
@@ -77,14 +79,23 @@ public class GameOfLife : MonoBehaviour
             _previousResolution = settings.resolution;
         }
         if (settings.running) {
+            double simStartTime = _simulationWatcher.Elapsed.TotalMilliseconds;
+            double simEndTime = simStartTime;
+            double avgSimTime = 0;
+            int simCount = 0;
             while (_simulationTimer > 1)
             {
-                Simulate();
+                simCount++;
+                if (simEndTime - simStartTime < (0.0166 - avgSimTime))
+                {
+                    Simulate();
+                }
+                simEndTime = _simulationWatcher.Elapsed.TotalMilliseconds;
+                avgSimTime = (simEndTime - simStartTime) / simCount;
                 _simulationTimer -= 1;
             }
             _simulationTimer += Time.deltaTime * settings.simulationSpeed;
         }
-        
     }
 
     /// <summary>
@@ -208,6 +219,7 @@ public class GameOfLife : MonoBehaviour
     {
         buffer_A.Release();
         buffer_B.Release();
+        _simulationWatcher.Stop();
     }
 }
 

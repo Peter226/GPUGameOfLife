@@ -1,8 +1,8 @@
 .container {
-    border-left-color: rgba(255, 255, 255, 255);
-    border-right-color: rgba(255, 255, 255, 255);
-    border-top-color: rgba(255, 255, 255, 255);
-    border-bottom-color: rgba(255, 255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -19,16 +19,16 @@
 }
 
 .text {
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .menu_button {
     background-color: rgba(0, 0, 0, 0.78);
-    color: rgba(255, 255, 255, 255);
-    border-left-color: rgba(255, 255, 255, 255);
-    border-right-color: rgba(255, 255, 255, 255);
-    border-top-color: rgba(255, 255, 255, 255);
-    border-bottom-color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
 }
 
 .menu_button:hover {
@@ -36,27 +36,27 @@
 }
 
 .menu_button:active {
-    background-color: rgba(101, 101, 101, 255);
-    border-left-color: rgba(255, 255, 255, 255);
-    border-right-color: rgba(255, 255, 255, 255);
-    border-top-color: rgba(255, 255, 255, 255);
-    border-bottom-color: rgba(255, 255, 255, 255);
+    background-color: rgb(101, 101, 101);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
 }
 
 .unity-foldout .unity-label {
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 #unity-tracker {
-    background-color: rgba(255, 255, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 #unity-dragger {
-    background-color: rgba(255, 255, 255, 255);
-    border-left-color: rgba(255, 255, 255, 255);
-    border-right-color: rgba(255, 255, 255, 255);
-    border-top-color: rgba(255, 255, 255, 255);
-    border-bottom-color: rgba(255, 255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 2px;
@@ -64,16 +64,16 @@
 }
 
 .resolution_selector_button {
-    border-left-color: rgba(255, 255, 255, 255);
-    border-right-color: rgba(255, 255, 255, 255);
-    border-top-color: rgba(255, 255, 255, 255);
-    border-bottom-color: rgba(255, 255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.89);
     border-left-width: 1px;
     border-right-width: 1px;
     border-top-width: 1px;
     border-bottom-width: 1px;
-    color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -95,4 +95,23 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
+}
+
+.unity-foldout #unity-checkmark {
+    background-image: url('/Assets/Textures/arrow.svg');
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.unity-foldout .unity-toggle:hover #unity-checkmark {
+    -unity-background-image-tint-color: rgba(0, 159, 255, 255);
+}
+
+.resolution_selector_button:hover {
+    background-color: rgba(65, 65, 65, 255);
+}
+
+.resolution_selector_button:active {
+    background-color: rgba(101, 101, 101, 255);
 }
