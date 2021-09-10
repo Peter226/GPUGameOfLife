@@ -284,7 +284,7 @@ MonoBehaviour:
   buffer_B: {fileID: 0}
   settings:
     resolution: 1024
-    simulationSpeed: 10
+    simulationSpeed: 100
     running: 1
   clearCompute: {fileID: 7200000, guid: 6d4ea2e675a93474888aa48d0c3f0c62, type: 3}
   lifeCompute: {fileID: 7200000, guid: 295f77985ef4ff24190e70b5fc547097, type: 3}

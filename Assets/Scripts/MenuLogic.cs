@@ -26,6 +26,7 @@ public class MenuLogic : MonoBehaviour
         _speedSlider = _root.Q<Slider>("SimSpeed");
         _speedSlider.lowValue = 0.0f;
         _speedSlider.highValue = 4.5f;
+        _speedSlider.value = Mathf.Log10(gameOfLife.settings.simulationSpeed);
         _resolutionFoldout = _root.Q<Foldout>("ResolutionFoldout");
 
         _resumeButton.clicked += Resume;
@@ -49,7 +50,7 @@ public class MenuLogic : MonoBehaviour
             _resolutionSelectors.Add(selector);
             button.clicked += selector.OnSelected;
         }
-        gameOfLife.settings.resolution = int.Parse(_resolutionFoldout.text);
+        _resolutionFoldout.text = gameOfLife.settings.resolution.ToString();
     }
 
 
