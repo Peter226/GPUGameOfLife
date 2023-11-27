@@ -29,6 +29,14 @@
     border-right-color: rgb(255, 255, 255);
     border-top-color: rgb(255, 255, 255);
     border-bottom-color: rgb(255, 255, 255);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
 }
 
 .menu_button:hover {
@@ -98,20 +106,20 @@
 }
 
 .unity-foldout #unity-checkmark {
-    background-image: url('/Assets/Textures/arrow.svg');
+    background-image: url('project://database/Assets/Textures/arrow.svg?fileID=7388822144124034973&guid=c6c9a86e802fca840b0d856be7ed71a8&type=3#arrow');
     -unity-slice-left: 0;
     -unity-slice-top: 0;
     -unity-background-scale-mode: scale-to-fit;
 }
 
 .unity-foldout .unity-toggle:hover #unity-checkmark {
-    -unity-background-image-tint-color: rgba(0, 159, 255, 255);
+    -unity-background-image-tint-color: rgb(0, 159, 255);
 }
 
 .resolution_selector_button:hover {
-    background-color: rgba(65, 65, 65, 255);
+    background-color: rgb(65, 65, 65);
 }
 
 .resolution_selector_button:active {
-    background-color: rgba(101, 101, 101, 255);
+    background-color: rgb(101, 101, 101);
 }

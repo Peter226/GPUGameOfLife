@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="menu.uss" />
+    <Style src="project://database/Assets/UI%20Toolkit/Menu/menu.uss?fileID=7433441132597879392&amp;guid=ac7d634e2393e564c92f9ba57e2e5ebb&amp;type=3#menu" />
     <ui:VisualElement name="Background" style="flex-grow: 1; flex-direction: row; background-color: rgba(0, 0, 0, 0.87);">
         <ui:VisualElement name="LeftSide" style="flex-grow: 1; align-items: center; justify-content: center;">
             <ui:VisualElement name="SettingsContainer" class="container" style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; background-color: rgba(0, 0, 0, 0.77); flex-direction: column; align-items: center;">
@@ -8,9 +8,9 @@
                     <ui:Label text="Simulation Speed:" display-tooltip-when-elided="true" name="SimSpeedLabel" class="text" style="flex-shrink: 1;" />
                     <ui:Slider picking-mode="Ignore" value="10" high-value="10.6" show-input-field="false" name="SimSpeed" low-value="0.1" style="flex-shrink: 1; flex-grow: 1; overflow: visible; display: flex; flex-wrap: nowrap; align-items: stretch; width: 300px; color: rgb(255, 255, 255);" />
                 </ui:VisualElement>
-                <ui:VisualElement name="SimulationResolutionContainer" class="container" style="padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; flex-direction: row;">
+                <ui:VisualElement name="SimulationResolutionContainer" class="container" style="padding-left: 6px; padding-right: 6px; padding-top: 6px; padding-bottom: 6px; flex-direction: row; justify-content: flex-start; align-items: center;">
                     <ui:Label text="Simulation Resolution:" display-tooltip-when-elided="true" name="SimResLabel" class="text" />
-                    <ui:VisualElement name="FoldoutContainer" style="width: 50px; height: 22px;">
+                    <ui:VisualElement name="FoldoutContainer" style="width: 70px; height: 30px; align-items: stretch; justify-content: flex-start; top: -2px;">
                         <ui:Foldout text="32" value="false" name="ResolutionFoldout" style="background-color: rgba(0, 0, 0, 0.8); border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; position: absolute; height: auto; color: rgb(255, 255, 255);" />
                     </ui:VisualElement>
                 </ui:VisualElement>
