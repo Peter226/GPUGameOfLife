@@ -18,8 +18,14 @@ public class GameOfLifeController : MonoBehaviour
     void Update()
     {
         //zoom the camera, and restrict it's zoom level within reasonable numbers
+        Vector3 lastWorldScrollPosition = _camera.ScreenToWorldPoint(Input.mousePosition); ;
+
         _camera.orthographicSize *= -Input.mouseScrollDelta.y * 0.1f + 1;
         _camera.orthographicSize = Mathf.Clamp(_camera.orthographicSize,0.0001f,1.0f);
+        
+        Vector3 nowWorldScrollPosition = _camera.ScreenToWorldPoint(Input.mousePosition);
+        transform.position += lastWorldScrollPosition - nowWorldScrollPosition;
+
         if (Input.GetMouseButtonDown(2))
         {
             previousMousePosition = Input.mousePosition;
@@ -32,10 +38,11 @@ public class GameOfLifeController : MonoBehaviour
             Vector3 delta = lastWorld - nowWorld;
             transform.position += new Vector3(delta.x, delta.y);
             previousMousePosition = Input.mousePosition;
-            //restrict camera position
-            Vector3 camPos = _camera.transform.position;
-            _camera.transform.position = new Vector3(Mathf.Clamp(camPos.x,-0.5f, 0.5f),Mathf.Clamp(camPos.y,-0.5f, 0.5f),camPos.z);
         }
+
+        //restrict camera position
+        Vector3 camPos = transform.position;
+        transform.position = new Vector3(Mathf.Clamp(camPos.x, -0.5f, 0.5f), Mathf.Clamp(camPos.y, -0.5f, 0.5f), camPos.z);
 
     }
 }
